@@ -1,0 +1,21 @@
+server:
+  port: 8060
+  servlet:
+    context-path: /patient-service
+
+spring:
+  application:
+    name: patient-service
+  datasource:
+    name: patient-monitoring
+    url: jdbc:mysql://localhost:3306/hospital
+    username: root
+    password: root
+    driver:
+      class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialeact: org.hibernate.dialeact.MySQL8Dialeact
+    hibernate:
+      ddl-auto: update
